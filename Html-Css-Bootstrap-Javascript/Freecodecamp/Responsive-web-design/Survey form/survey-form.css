@@ -15,8 +15,6 @@ body {
     margin:0 auto;
 }
 
-
-
 h5 {
     margin-left: 0 !important;
 }
@@ -29,7 +27,6 @@ label {
     display: flex;
     align-items: center;
 }
-
 
 #programming-language {
     margin-bottom: 2rem;
