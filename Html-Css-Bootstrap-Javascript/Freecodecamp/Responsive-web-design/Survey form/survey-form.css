@@ -1,0 +1,40 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0, .2)),url(https://wallpaperaccess.com/full/268094.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.all {
+    background-image: linear-gradient(rgba(0,0,0, .7),rgba(0,0,0,.7));
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+}
+
+#survey-form {
+    width: 50%;
+    margin:0 auto;
+}
+
+
+
+h5 {
+    margin-left: 0 !important;
+}
+
+span {
+    font-size: .9rem;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+
+#programming-language {
+    margin-bottom: 2rem;
+}
+
+#message-box {
+    padding-bottom: 2rem;
+}
