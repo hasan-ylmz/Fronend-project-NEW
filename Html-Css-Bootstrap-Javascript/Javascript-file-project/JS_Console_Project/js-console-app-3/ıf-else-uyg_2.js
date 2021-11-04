@@ -34,7 +34,7 @@ switch(month){
         console.log("Sonbahar mevsimi ");
         break;
     default:
-        console.log("Yanlış ay girdiniz .")
+        console.log("Girilen ay bilgisi yanlış , lütfen tekrar giriniz")
 }
 
 /* 
