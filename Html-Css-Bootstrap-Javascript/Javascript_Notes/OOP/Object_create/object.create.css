@@ -1,0 +1,60 @@
+.one {
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.one:hover  {
+    color:  black;
+}
+
+.one h1 {
+    width: 20rem;
+}
+
+.two {
+    background-image:  linear-gradient(rgba(0,0, 0, 0.2), rgba(0,0,0 ,0.2))  ,url(https://cdn.wallpapersafari.com/67/29/059nQs.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.two ul {
+    list-style: none;
+    background-color: transparent;
+}
+
+ul #red {
+    color: red;
+    font-size: 2rem;
+    font-style:italic;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover {
+    color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    .two {
+        height: 75vh;
+    }
+  }
+
+#document-open {
+    margin-left: 1.9rem !important;
+}
+
+#document-open  {
+    font-size: 1.4rem;
+}
