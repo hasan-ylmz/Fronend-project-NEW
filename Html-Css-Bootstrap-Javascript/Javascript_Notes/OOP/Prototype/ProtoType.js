@@ -48,6 +48,12 @@ let person = function(name,yearOfbirth,job){
     this.job= job;
 }
 
+/*
+    Person objesinin proto ksımıdaki calculateAge'i bütün instancelar üzerinde kullanabiliriz .
+    Dikkat edilmesi gereken konu her üretilen objenin içerisinde CalculateAge metodunun olmadığıdır .  
+
+*/
+
 // calculateAge prototype
 person.prototype.calculateAge =function() {
     return 2022-this.yearOfbirth;
@@ -71,6 +77,7 @@ console.log(emel.calculateAge());
 console.log(emel.getName());
 console.log(emel.lastName);
 
+
 // hasOwnProperty
 /*
     hasOwnProperty metodunun anlamı  üzere objede o özelliğin olup olmadığını kontrol edip boolean bir değer döndürür . ...
@@ -78,13 +85,8 @@ console.log(emel.lastName);
 
     //console.log(emel.hasOwnProperty("lastName"));
 
-    Değeri false döner sebei ise prototype ksımında olan fonksiyonlar perosn objesine özel olanlardır .
-    Emel veya mahmut objesine direkt aktarılıyor kopyalanmıyor . 
+    Değeri false döner sebei ise prototype ksımında olan fonksiyonlar person objesine özel olanlardır .
+    Person objesinden türetmiş olduğum emel veya mahmut objesine direkt aktarılıyor kopyalanmıyor . 
 */
 
-
-
 console.log(emel.hasOwnProperty("name"));
-
-
-
