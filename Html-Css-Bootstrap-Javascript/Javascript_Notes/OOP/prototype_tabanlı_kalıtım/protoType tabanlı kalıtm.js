@@ -29,7 +29,11 @@ let Teacher = function(name,yearOfBirth,job,subject){
     this.subject=subject;
 }
 
-// Inherit the Person prototype methods 
+// Person proto kısmı henüz  constructor'ına aktarılmadı 
+// Inherit olmadan calculateAge yazdırılırsa hata alınır.
+
+
+// INHERIT THE PERSON PROTOTYPE METHODS 
 
 // Prototypeları persondan teacher'a aktardık. Fakat constructor' da 4 parametre olması gerekiyor .
 Teacher.prototype=Object.create(person.prototype);
