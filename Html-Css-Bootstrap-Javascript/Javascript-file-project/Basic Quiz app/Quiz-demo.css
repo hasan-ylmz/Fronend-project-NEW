@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(156, 156, 156);
+}
+/*Card*/
+.card {
+    background-color: black;
+    color: white;
+}
+
+.card-body {
+    background-color: rgb(37, 37, 37);
+}
+
+hr {
+    color: white;
+}
+
+/* Buttons */
+#question , .btn {
+    box-shadow: 2px 2px 2px 2px black;
+
+}
+
+#buttons {
+    display: flex;
+    justify-content:space-around;
+    align-content: space-around;
+}
