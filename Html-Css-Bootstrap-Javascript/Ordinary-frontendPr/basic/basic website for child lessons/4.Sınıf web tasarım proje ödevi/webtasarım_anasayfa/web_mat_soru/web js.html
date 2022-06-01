@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web tasarım js soru</title>
+    <link rel="stylesheet" href="web js.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light shadow-5-strong">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/webtasarım_anasayfa/web-tasarım.html">4.Sınıf Konu anlatımları</a>
+    
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+    
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-0 mb-lg-0" style="font-size:1.2rem ;">
+            <li class="nav-item">
+              <a class="nav-link" href="/webtasarım_anasayfa/web-tasarım.html">Fen Konu </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/webtasarım_anasayfa/web-tasarım.html">Mat Konu </a>
+            </li>
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Soru Çözümleri
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/webtasarım_anasayfa/web_fen_soru/web_fen_soru.html">Fen</a></li>
+                <li><a class="dropdown-item" href="web js.html">Matematik</a></li>
+              </ul>
+            </li>
+
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <div class="board px-0" >
+        <h3 id="time" class="" style="display: flex; justify-content:center; align-items:center; font-size: 30px; background-color: black;  color: white; font-family: 'Orbitron', sans-serif;" >Süre:</h3>
+        <h3 id="point" style="margin-left: 5rem; font-family: 'Orbitron', sans-serif;">Puan:</h3>
+        <div class="qp" style="display: flex; justify-content:center; align-items:center;">
+            <p id="qp1">1</p>
+            <p id="qp2">2</p>
+            <p id="qp3">3</p>
+            <p id="qp4">4</p>
+            <p id="qp5">5</p>
+            <p id="qp6">6</p>
+            <p id="qp7">7</p>
+            <p id="qp8">8</p>
+            <p id="qp9">9</p>
+            <p id="qp10">10</p>
+        </div>
+      </div>
+    <div class="container" >
+          <div class="main" style="margin-top: 20px !important;">
+            <div class="question">
+              <p><strong>1.</strong>
+                2A4 5B8  Yandaki sayı altı basamaklı bir sayıdır. Buna göre A ve B basamağının adı nedir ?
+              </p>
+              <input type="radio" name="qp1" value="Binler - Yüzler basamağı" onclick="control(1,'Binler - Yüzler basamağı')"> Binler - Yüzler basamağı <br>
+              <input type="radio" name="qp1" value="On binler - Onlar basamağı" onclick="control(1,'On binler - Onlar basamağı')">On binler - Onlar basamağı  <br>
+              <input type="radio" name="qp1" value="yüz binler - Yüzler basamağı" onclick="control(1,'yüz binler - Yüzler basamağı')"> yüz binler - Yüzler basamağı <br>
+              <input type="radio" name="qp1" value="Binler - Birler basamağı" onclick="control(1,'Binler - Birler basamağı')">  Binler - Birler basamağı
+            </div>
+            <div class="question">
+              <p><strong>2.</strong> 5A 54B yandaki sayı beş basamaklı bir sayıdır. A yerine 4, B yerine de 8 yazılırsa sayının okunuşu nasıl olur ?</p>
+              <input type="radio" name="q2" value="Elli dört bin kırk sekiz" onclick="control(2,'Elli dört bin kırk sekiz')"> Elli dört bin kırk sekiz  <br>
+              <input type="radio" name="q2" value="Elli bin beş yüz kırk sekiz" onclick="control(2,'Elli bin beş yüz kırk sekiz')">  Elli bin beş yüz kırk sekiz <br>
+              <input type="radio" name="q2" value="Elli dört bin beş yüz kırk sekiz" onclick="control(2,'Elli dört bin beş yüz kırk sekiz')"> Elli dört bin beş yüz kırk sekiz <br>  
+              <input type="radio" name="q2" value="Elli bin sekiz" onclick="control(2,'Elli bin sekiz')">   Elli bin sekiz
+            </div>
+             <div class="question">
+              <p><strong>3.</strong> 5 - 7 - 8 - 2 - 4 yandaki rakamlarla yazılabilecek en küçük beş basamaklı doğal sayı aşağıdakilerden hangisidir ? </p>
+              <input type="radio" name="q3" value="25 478" onclick="control(3,'25 478')">25 478 <br>
+              <input type="radio" name="q3" value="24 578" onclick="control(3,'24 578')"> 24 578 <br>
+              <input type="radio" name="q3" value="27 485" onclick="control(3,'27 485')"> 27 485 <br>
+              <input type="radio" name="q3" value="48 752" onclick="control(3,'48 752')">  48 752
+            </div>
+            <div class="question">
+              <p><strong>4.</strong>1452, 1371, 1458, 1542 yandaki sayıların büyükten küçüğe doğru sıralanışı aşağıdakilerden hangisinde doğru olarak verilmiştir ?    </p>
+              <input type="radio" name="q4" value="1542 - 1452 - 1458 - 1371" onclick="control(4,'1542 - 1452 - 1458 - 1371')">1542 - 1452 - 1458 - 1371 <br>
+              <input type="radio" name="q4" value="1542 - 1371 - 1452 - 1458" onclick="control(4,'1542 - 1371 - 1452 - 1458')">1542 - 1371 - 1452 - 1458  <br>
+              <input type="radio" name="q4" value="1542 - 1458 - 1452 - 1371" onclick="control(4,'1542 - 1458 - 1452 - 1371')">1542 - 1458 - 1452 - 1371  <br>
+              <input type="radio" name="q4" value="1371 - 1452 - 1458 - 1542" onclick="control(4,'1371 - 1452 - 1458 - 1542')">1371 - 1452 - 1458 - 1542  
+            </div>
+            <div class="question">
+              <p><strong>5.</strong>1/3 ü 15 olan sayının tamamı kaçtır ?</p>
+              <input type="radio" name="q5" value="90" onclick="control(5,'90')"> 90<br>
+              <input type="radio" name="q5" value="70" onclick="control(5,'70')"> 70 <br>
+              <input type="radio" name="q5" value="45" onclick="control(5,'45')"> 45  <br>
+              <input type="radio" name="q5" value="20" onclick="control(5,'20')"> 20 
+            </div>
+            <div class="question">
+              <p><strong>6.</strong>1/5 kesrinin türü aşağıdakilerden hangisidir ?  </p>
+              <input type="radio" name="q6" value="Bileşik kesir" onclick="control(6,'Bileşik kesir')"> Bileşik kesir<br>
+              <input type="radio" name="q6" value="Basit kesir" onclick="control(6,'Basit kesir')">Basit kesir <br>
+              <input type="radio" name="q6" value="Ondalık kesir" onclick="control(6,'Ondalık kesir')">Ondalık kesir <br> 
+              <input type="radio" name="q6" value="Tam sayılı kesir" onclick="control(6,'Tam sayılı kesir')"> Tam sayılı kesir
+          </div>
+            <div class="question">
+                <p><strong>7.</strong>2/3 > 1/3</p>
+                <p>  Eşitsizlik doğru mudur yanlış mıdır ? </p> 
+              <input type="radio" name="q7" value="Doğru" onclick="control(7,'Doğru')"> Doğru<br>
+              <input type="radio" name="q7" value="Yanlış" onclick="control(7,'Yanlış')"> Yanlış <br>
+            </div>
+             <div class="question">
+              <p><strong>8.</strong>Alanı 4 metrekare olan kare ile kısa kenarı, karenin bir kenarına eşit olan bir dikdörtgen yapılacaktır. Dikdörtgenin uzun kenarı 22 m olduğuna göre bu dikdörtgen için kaç adet kare gereklidir ?</p>
+              <input type="radio" name="q8" value="8" onclick="control(8,'8')">8<br>
+              <input type="radio" name="q8" value="9" onclick="control(8,'9')">  9<br>
+              <input type="radio" name="q8" value="10" onclick="control(8,'10')"> 10 <br>
+              <input type="radio" name="q8" value="11" onclick="control(8,'11')">11 
+            </div>
+            <div class="question">
+              <p><strong>9.</strong>6 m eninde, 12 m boyunda bir bahçenin içine 4 m eninde 6 m boyunda bir kulübe yapıldığında geriye kalan alan kaç metrekaredir ? </p>
+              <input type="radio" name="q9" value="6 metrekare" onclick="control(9,'6 metrekare')">6  metrekare<br>
+              <input type="radio" name="q9" value="12 metrekare" onclick="control(9,'12 metrekare')"> 12  metrekare<br>
+              <input type="radio" name="q9" value="24 metrekare" onclick="control(9,'24 metrekare')"> 24 metrekare<br>
+              <input type="radio" name="q9" value="48 metrekare" onclick="control(9,'48 metrekare')"> 48 metrekare
+            </div>
+            <div class="question">
+              <p><strong>10.</strong>50 liralık ceketten 3 tane, 25 liralık tişörtten 4 tane ve 30 liralık pantolondan 1 tane alan Mehmet kasiyere toplam kaç para öder ?</p>
+              <input type="radio" name="q10" value="220" onclick="control(10,'220')"> 220<br>
+              <input type="radio" name="q10" value="240" onclick="control(10,'240')"> 240 <br>
+              <input type="radio" name="q10" value="250" onclick="control(10,'250')"> 250<br>
+              <input type="radio" name="q10" value="280" onclick="control(10,'280')"> 280 
+            </div>
+          </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="web js.js"></script>
+</body>
+</html>

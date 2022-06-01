@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="web-tasarım.css">
+    <title>Flexbox -1</title>
+</head>
+<body class="text-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong " style="z-index: 10; position:absolute">
+        <!-- Container wrapper -->
+        <div class="container">
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="/webtasarım_anasayfa/web-tasarım.html">4.Sınıf Konu anlatımları</a>
+      
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+      
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-0 mb-lg-0" style="font-size:1.2rem ;">
+              <li class="nav-item">
+                <a class="nav-link" href="#fen_baslangıc">Fen Konu </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#mat_baslangıç ">Mat Konu </a>
+              </li>
+              <!-- Navbar dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Soru Çözümleri
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="web_fen_soru/web_fen_soru.html">Fen</a></li>
+                  <li><a class="dropdown-item" href="web_mat_soru/web js.html">Matematik</a></li>
+                </ul>
+              </li>
+
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+    <div class="cover">
+        <!-- Navbar -->
+
+        <!--Covered Div-->
+        <div class="covered-div" id="mat_background_image">
+            <ul class="about_us">
+                <li>            
+                    <a href="#mat_baslangıç" id="mat_baslık">Matematik</a>
+                </li>
+            </ul>
+        </div>
+        <div class="covered-div" id="science_background_image">
+            <ul class="about_us">
+                <li>
+                    <a href="#fen_baslangıc" id="fen_baslık">Fen Bilimleri  </a>
+                </li>
+            </ul>
+        </div>
+        <!-- End Covered Div-->
+    </div>
+
+    <div class="container mt-0 a " id="fen_baslangıc">
+        <div class=" ps-4 mt-3  d-flex justify-content-evenly " id="science">
+            <div>
+                <h3 id="list-of-science" class="pe-5 display-6 d-flex align-items-center" >Fen Bilimleri </h3>
+            </div>
+            <div class=" d-flex align-items-center">
+                <ul id="fen_konu" class="p-1 list_science">
+                    <li><a href="webtasarım_fen/dünya/dünyanınşekli.html" class="m-2"> Dünyamızın Hareketleri</a></li>
+                    <li><a href="webtasarım_fen/besinlerimiz/besinlerimiz.html"class="m-2"> Besinlerimiz Konuları</a></li>
+                    <li><a href="webtasarım_fen/kuvvet/kuvvet.html" class="m-2">Kuvveti Tanıyalım Konuları</a></li>
+                    <li><a href="webtasarım_fen/madde_ozellık/madde_ozellık.html" class="m-2">Maddenin Halleri Konuları</a></li>
+                </ul>
+            </div>
+        </div>    
+    </div>
+
+    <div class="container" id="mat_baslangıç">
+        <div class=" ps-4 mt-3 d-flex justify-content-evenly   pe-5" id="math">
+            <div class=""> 
+                <h3 id="list-of-math" class="ms-1 display-6 d-flex align-items-center mb-5">Matematik </h3>
+            </div>
+            <div class=" d-flex align-items-center">
+                <ul id="mat_konu" class="list-of-math">
+                    <li><a href="/webtasarım_anasayfa/webtasarım_mat/Doğal_sayılar/d.html" class="m-2">Doğal Sayılar</a></li>
+                    <li><a href="/webtasarım_anasayfa/webtasarım_mat/Kesirler/kesirler.html"class="m-2">Kesirler	</a></li>
+                    <li><a href="/webtasarım_anasayfa/webtasarım_mat/ÇIkarma/çıkarma.html" class="m-2">Çıkarma 	</a></li>
+                    <li><a href="/webtasarım_anasayfa/webtasarım_mat/Toplama/toplama.html" class="m-2">Toplama işlemi</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="web-tasarım.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

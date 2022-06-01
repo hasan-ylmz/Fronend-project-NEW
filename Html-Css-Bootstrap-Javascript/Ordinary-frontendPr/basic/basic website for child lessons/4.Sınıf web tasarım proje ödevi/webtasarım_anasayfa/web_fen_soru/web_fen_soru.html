@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web tasarım js soru</title>
+    <link rel="stylesheet" href="/webtasarım_anasayfa/web_mat_soru/web js.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light shadow-5-strong">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/webtasarım_anasayfa/web-tasarım.html">4.Sınıf Konu anlatımları</a>
+    
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+    
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-0 mb-lg-0" style="font-size:1.2rem ;">
+            <li class="nav-item">
+              <a class="nav-link" href="/webtasarım_anasayfa/web-tasarım.html">Fen Konu </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/webtasarım_anasayfa/web-tasarım.html">Mat Konu </a>
+            </li>
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Soru Çözümleri
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="/webtasarım_anasayfa/web_fen_soru/web_fen_soru.html">Fen</a></li>
+                <li><a class="dropdown-item" href="/webtasarım_anasayfa/web_mat_soru/web js.html">Matematik</a></li>
+              </ul>
+            </li>
+
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <div class="board px-0" >
+        <h3 id="time" class="" style="display: flex; justify-content:center; align-items:center; font-size: 30px; background-color: black;  color: white; font-family: 'Orbitron', sans-serif;" >Süre:</h3>
+        <h3 id="point" style="margin-left: 5rem; font-family: 'Orbitron', sans-serif;">Puan:</h3>
+        <div class="qp" style="display: flex; justify-content:center; align-items:center;">
+            <p id="qp1">1</p>
+            <p id="qp2">2</p>
+            <p id="qp3">3</p>
+            <p id="qp4">4</p>
+            <p id="qp5">5</p>
+            <p id="qp6">6</p>
+            <p id="qp7">7</p>
+            <p id="qp8">8</p>
+            <p id="qp9">9</p>
+            <p id="qp10">10</p>
+        </div>
+      </div>
+    <div class="container" >
+          <div class="main" style="margin-top: 20px !important;">
+            <div class="question">
+              <p><strong>1.</strong>
+                Canlıların yaşamını sürdürebilmesi büyüyüp gelişmesi için tüketilen içecek ve yiyeceklere ne ad verilir ?
+              </p>
+              <input type="radio" name="qp1" value="Besin" onclick="control(1,'Besin')"> Besin<br>
+              <input type="radio" name="qp1" value="Yemek yeme" onclick="control(1,'Yemek yeme')">Yemek yeme  <br>
+              <input type="radio" name="qp1" value="Beslenme" onclick="control(1,'Beslenme')">Beslenme  <br>
+              <input type="radio" name="qp1" value="Tüketim" onclick="control(1,'Tüketim')">Tüketim  
+            </div>
+            <div class="question">
+              <p><strong>2.</strong> Ali top oynarken düşüp kolunu kırmıştır.
+                Ali' nin kolunun iyileşmesi için aşağıdaki besin grubundan hangisini daha fazla yemelidir ?</p>
+              <input type="radio" name="q2" value="Mineraller ve vitamin" onclick="control(2,'Mineraller ve vitamin')"> Mineraller ve vitamin  <br>
+              <input type="radio" name="q2" value="Yağ" onclick="control(2,'Yağ')">Yağ  <br>
+              <input type="radio" name="q2" value="Karbonhidrat" onclick="control(2,'Karbonhidrat')">Karbonhidrat  <br>  
+              <input type="radio" name="q2" value="Protein" onclick="control(2,'Protein')"> Protein   
+            </div>
+             <div class="question">
+              <p><strong>3.</strong> Kas sağlığı ve gelişimi için tüketilmesi gereken gıdalar aşağıdakilerden hangisidir ? </p>
+              <input type="radio" name="q3" value="Balık - pilav - tavuk" onclick="control(3,'Balık - pilav - tavuk')">Balık - pilav - tavuk<br>
+              <input type="radio" name="q3" value="zeytin - peynir - süt" onclick="control(3,'zeytin - peynir - süt')">zeytin - peynir - süt  <br>
+              <input type="radio" name="q3" value="Bal - pekmez - yoğurt" onclick="control(3,'Bal - pekmez - yoğurt')"> Bal - pekmez - yoğurt <br>
+              <input type="radio" name="q3" value="yumurta - et - süt" onclick="control(3,'yumurta - et - süt')">yumurta - et - süt  
+            </div>
+            <div class="question">
+              <p><strong>4.</strong>Aşağıda verilen besinlerden hangisinde mineral ve su bulunur ?    </p>
+              <input type="radio" name="q4" value="Meyve" onclick="control(4,'Meyve')">Meyve <br>
+              <input type="radio" name="q4" value="Pirinç" onclick="control(4,'Pirinç')">Pirinç  <br>
+              <input type="radio" name="q4" value="Buğday" onclick="control(4,'Buğday')">Buğday  <br>
+              <input type="radio" name="q4" value="Nohut" onclick="control(4,'Nohut')">Nohut  
+            </div>
+            <div class="question">
+              <p><strong>5.</strong>Aşağıdakilerden hangisinde bir çekme kuvveti uygulanmamaktadır ?</p>
+              <input type="radio" name="q5" value="Buzdolabının kapağını açarken" onclick="control(5,'Buzdolabının kapağını açarken')">Buzdolabının kapağını açarken <br>
+              <input type="radio" name="q5" value="Pantolonumuzu giyerken" onclick="control(5,'Pantolonumuzu giyerken')"> Pantolonumuzu giyerken <br>
+              <input type="radio" name="q5" value="Fındık kırarken" onclick="control(5,'Fındık kırarken')">Fındık kırarken   <br>
+              <input type="radio" name="q5" value="Pencereyi açarken" onclick="control(5,'Pencereyi açarken')">Pencereyi açarken
+            </div>
+            <div class="question">
+              <p><strong>6.</strong> Duran nesneleri hareket ettiren hareket eden nesneyi durduran nesnelerin şeklinin değiştiren etkiye ne denir ?</p>
+              <input type="radio" name="q6" value="Ağırlık" onclick="control(6,'Ağırlık')">Ağırlık <br>
+              <input type="radio" name="q6" value="Konum" onclick="control(6,'Konum')">Konum <br>
+              <input type="radio" name="q6" value="Güç" onclick="control(6,'')">Güç <br> 
+              <input type="radio" name="q6" value="Kuvvet" onclick="control(6,'Kuvvet')">Kuvvet
+          </div>
+            <div class="question">
+                <p><strong>7.</strong>Merve oyuncak bebeğini tamamen su dolu kaba batırdığında suyun taştığını görüyor.
+                    Buna göre Merve, oyuncak bebeğiyle ilgili nasıl bir çıkarımda bulunabilir? </p> 
+              <input type="radio" name="q7" value="Bebek bezden yapılmıştır." onclick="control(7,'Bebek bezden yapılmıştır.')">Bebek bezden yapılmıştır. <br>
+              <input type="radio" name="q7" value="Bebeğin bir kütlesi vardır." onclick="control(7,'Bebeğin bir kütlesi vardır.')">Bebeğin bir kütlesi vardır.  <br>
+              <input type="radio" name="q7" value="Bebeğin bir hacmi vardır." onclick="control(7,'Bebeğin bir hacmi vardır.')"> Bebeğin bir hacmi vardır.<br>
+              <input type="radio" name="q7" value="Bebek sudan ağırdır." onclick="control(7,'Bebek sudan ağırdır.')"> Bebek sudan ağırdır. <br>
+            </div>
+             <div class="question">
+                <img src="https://www.testlericoz.com/wp-content/uploads/2020/03/4-sinif-maddenin-ozellikleri-1-6.png" alt="maddenin özellikleri">
+                <p><strong>8.</strong>Yukarıdakilerden hangisi maddedir?</p>
+              <input type="radio" name="q8" value="A" onclick="control(8,'A')">A<br>
+              <input type="radio" name="q8" value="B" onclick="control(8,'B')">B  <br>
+              <input type="radio" name="q8" value="C" onclick="control(8,'C')">C  <br>
+              <input type="radio" name="q8" value="D" onclick="control(8,'D')"> D
+            </div>
+            <div class="question">
+              <p><strong>9.</strong>Aşağıdaki maddelerin hangisinin belirli bir şekli ve hacmi vardır ? </p>
+              <input type="radio" name="q9" value="Alkol" onclick="control(9,'Alkol')">Alkol<br>
+              <input type="radio" name="q9" value="Zeytinyağı" onclick="control(9,'Zeytinyağı')"> Zeytinyağı<br>
+              <input type="radio" name="q9" value="Su" onclick="control(9,'Su')">Su <br>
+              <input type="radio" name="q9" value="Armut" onclick="control(9,'Armut')"> Armut
+            </div>
+            <div class="question">
+              <p><strong>10.</strong>Aşağıdakilerden hangisi maddenin ölçülebilir bir özelliklerindendir ?</p>
+              <input type="radio" name="q10" value="Esnekliği" onclick="control(10,'Esnekliği')">Esnekliği <br>
+              <input type="radio" name="q10" value="Opaklığı" onclick="control(10,'Opaklığı')">Opaklığı <br>
+              <input type="radio" name="q10" value="Hacmi" onclick="control(10,'Hacmi')">Hacmi <br>
+              <input type="radio" name="q10" value="Rengi" onclick="control(10,'Rengi')">Rengi  
+            </div>
+          </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="web_fen_soru.js"></script>
+</body>
+</html>

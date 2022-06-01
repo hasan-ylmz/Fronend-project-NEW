@@ -1,0 +1,39 @@
+ html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+.question {
+  padding:10px;
+  font-size:20px;
+  margin-bottom:0px;
+  color: black;
+  right: 3px;
+  }
+
+strong {
+  color: limegreen ;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.board {
+  width:300px;
+  min-height:100px;
+  background-color:#e1e1e1;
+  position:absolute;
+  display: block;
+  border-radius: 10px;
+  right:10px;
+  top:10px;
+  padding-left:6px;
+}
+
+.board p {
+  display:inline;
+  background-color:#0a0a0a;
+  color: white;
+  margin-left:10px;
+  padding-left:5px;
+  padding-right:5px;
+}

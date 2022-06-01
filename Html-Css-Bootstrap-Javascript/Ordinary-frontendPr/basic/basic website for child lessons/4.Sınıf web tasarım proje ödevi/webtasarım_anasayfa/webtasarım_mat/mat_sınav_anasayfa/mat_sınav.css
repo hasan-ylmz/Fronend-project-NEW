@@ -1,0 +1,30 @@
+/* Body */
+body { 
+    background: linear-gradient(rgba(0,0,0 ,.5 ) ,rgba(0,0,0 , .5)) ,url(https://leedsunilibrary.files.wordpress.com/2020/04/math-1143869_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:  0;
+}
+
+/* math_Question_list */
+#math_Question_list {
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    height: 83.4vh;
+    list-style: none;
+}
+
+#math_Question_list a {
+    text-decoration: none;
+    color: white;
+    transition: color .5s ease-in;
+    transition: .5s font-size ease-in-out;
+    font-size: 1.3rem;
+}
+
+#math_Question_list a:hover {
+    color: black;
+    font-size: 1.5rem;
+}  

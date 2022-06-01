@@ -1,0 +1,85 @@
+body {
+    padding: 0;
+    color: black;
+    font-size: 1.2rem;
+}
+
+/* Covered div */
+.cover{
+    margin: 0;
+    background:linear-gradient(rgba(0,0,0, .6),rgba(0,0,0, .6)),url(https://img.freepik.com/free-photo/back-school-background-with-school-supplies-copy-space_23-2148958977.jpg?w=2000) ;
+    background: cover center no-repeat;
+    position: relative;
+    width: 99vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.covered-div {
+    width:40vh ;
+    height: 40vh;
+    margin: 10px;
+    background-color: rgb(63, 63, 63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 5px;
+}
+/* UL Lİ  */
+li {
+    list-style:none;
+}
+
+ul {
+    padding-left:0; 
+    font-size: small;
+}
+
+#mat_background_image{
+    background-image: linear-gradient(rgba(0, 0, 0 , .5), rgba(0,0,0, .5)),url(https://static.vecteezy.com/system/resources/thumbnails/003/556/541/small_2x/kids-holding-math-tools-with-math-doodle-objects-free-vector.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+#science_background_image{
+    background-image: linear-gradient(rgba(0, 0, 0 , .5), rgba(0,0,0, .5)),url(https://img.freepik.com/free-vector/hand-drawn-science-background-with-elements-collection_23-2148552162.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#mathQuestion_background_image {
+    background: linear-gradient(rgba(0, 0,0, .5) , rgba(0,0,0, .5)), url(https://png.pngtree.com/thumb_back/fw800/background/20210115/pngtree-hand-drawn-vector-cartoon-math-concept-background-image_525115.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li a , .cover {
+    text-decoration: none;
+    color: black;
+    transition: .5s color ease-out;
+}
+
+li a:hover{
+    color: rgb(61, 180, 37);
+}
+ 
+.about_us a {
+    color: white;
+    font-size: 1.2rem;
+} 
+
+ #list-of-science li , #list-of-math li{
+    list-style:upper-roman !important;
+}
+
+#list-of-math {
+    margin-right: 1rem;
+}
+
+#list-of-science , #list-of-math {
+    height :100vh;
+}
