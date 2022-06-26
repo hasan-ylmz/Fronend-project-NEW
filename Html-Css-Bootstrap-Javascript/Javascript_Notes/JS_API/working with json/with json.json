@@ -1,0 +1,8 @@
+
+{
+    "employees" :[
+        {"firstname" : "Burak", "lastname" : "Yılmaz" ,"age": 18, "retired" : false},
+        {"firstname" : "Mahmut", "lastname" : "Yılmaz" ,"age": 15, "retired" : false},
+        {"firstname" : "Mehmet", "lastname" : "Yılmaz" ,"age": 65, "retired" : true}       
+    ]
+}

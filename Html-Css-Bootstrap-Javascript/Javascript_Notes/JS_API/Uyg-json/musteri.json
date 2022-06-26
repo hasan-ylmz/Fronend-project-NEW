@@ -1,0 +1,21 @@
+[
+    {
+        "firstName" :"Burak",
+        "lastName" : "Yılmaz",
+        "age" :18,
+        "retired" : false
+    },
+    {
+        "firstName" :"Ahmet",
+        "lastName" : "Zorlu",
+        "age" :62,
+        "retired" : true        
+    },
+    {
+        "firstName" :"Mahmut",
+        "lastName" : "Başaran",
+        "age" :43,
+        "retired" : false
+    }
+
+]
