@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Country Apı project V2</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+      .col-2 img{
+        height: 8rem !important;
+      }
+
+      #detail {
+        opacity: 0;
+      }
+    </style>
+
+
+  </head>
+  <body>
+
+    <div class="container my-4">
+      <div class="display-4  d-flex justify-content-center mt-4 mb-5">Country Search Apı Project</div>
+      
+      <div id="error"></div>
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="input-group">
+              <input type="text" class="form-control" id="txtSearch">
+              <button class="btn btn-dark" type="button" id="btnSearch">Search </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="detail">
+          <div class="card mb-3">
+            <div class="card-header">Search Result</div>
+            <div class="card-body">
+              <div class="row" id="country-detail">
+  
+              </div>
+            </div>
+          </div>
+  
+          <div class="card mb-3">
+            <div class="card-header">Border Country</div>
+            <div class="card-body">
+              <div class="row" id="neighbor">
+  
+              </div>
+            </div>
+          </div>
+  
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script>
+    
+      document.querySelector("#btnSearch").addEventListener("click", () => {
+          let text = document.querySelector("#txtSearch").value;
+          document.querySelector("#detail").style.opacity = 0; 
+          getCountry(text);
+          
+      })
+
+      function getCountry(country){
+          const request = fetch("https://restcountries.com/v3.1/name/" + country)
+            // response.json() =Convert data to readable data when using response.json()
+            .then((response) => {
+              if(!response.ok)
+                  throw new Error("Country not find . Please try again .");
+                return response.json();
+            })
+            .then((data) => {
+              renderCountry(data[0]);
+              const countries =(data[0].borders);
+
+              if(!countries) 
+                    throw new Error("Border countries not find");
+
+              return fetch("https://restcountries.com/v3.1/alpha?codes=" + countries.toString());
+            })
+            .then(response =>  response.json())
+            .then(data => renderNeighbour(data))
+            .catch(err => errorMsg(err));
+      }
+
+      function renderCountry(data){
+        document.querySelector("#country-detail").innerHTML = "";
+        document.querySelector("#neighbor").innerHTML = "";
+
+          let html= `
+
+              <div class="col-4">
+                  <img src="${data.flags.png}" alt="country flag picture" class="card-img-top">
+              </div>
+              <div class="col-8">
+                      <h3 class="card-title">${data.name.common}</h3>
+                      <hr>
+                      <div class="row">
+                          <div class="col-4">Country capital  : </div>
+                          <div class="col-8">${data.capital}</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-4">Populatıon : </div>
+                          <div class="col-8">${(data.population / 1000000).toFixed(1)} milion</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-4">Region : </div>
+                          <div class="col-8">${data.region}  </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-4">Currencies : </div>
+                          <div class="col-8">${Object.values(data.currencies)[0].name} </div>
+                      </div>
+                  </div>
+                </div>
+          `;
+          document.querySelector("#detail").style.opacity=1;
+          document.querySelector("#country-detail").innerHTML = html;
+          
+          
+      };
+
+      function renderNeighbour(data){
+          let html = "";
+          for(let country of data){
+              html += `
+              <div class="col-2 mt-2">
+                  <div class="card">
+                      <img src="${country.flags.png}" class="card-img-top">
+                      <div class="card-body">
+                          <h6 class="card-title">${country.name.common}</h6>
+                          <div class="row">
+                          <div class="col">Populatıon:</div>
+                          <div class="col">${(country.population / 1000000).toFixed(1)} milion</div>
+                      </div>
+                      </div>
+                  </div>
+              </div>`;
+          }
+          document.querySelector("#neighbor").innerHTML = html;
+      }
+
+      function errorMsg(err){
+        const html =`
+        <div class="alert alert-danger d-flex align-items-center" role="alert">
+          <i class="bi bi-exclamation-triangle-fill me-2"></i>
+          ${err.message}
+        </div>
+        `;
+        setTimeout(function() {
+          document.querySelector("#error").innerHTML= "";
+        },2000)
+        document.querySelector("#error").innerHTML = html; 
+      };
+    </script>
+    </body>
+</html>
